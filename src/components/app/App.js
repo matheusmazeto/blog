@@ -31,7 +31,11 @@ function App({ children }) {
   }, [darkMode]);
 
   function getInitialMode() {
+<<<<<<< HEAD
     const isReturningUser = 'dark' in localStorage;
+=======
+    const isReturningUser = 'dark' in window.localStorage;
+>>>>>>> 4b7300cfa0cf39d95f63382cdaa86a04e6cf8a06
     const savedMode = JSON.parse(localStorage.getItem('dark'));
     const userPrefersDark = getPrefColorScheme();
     // if mode was saved --> dark / light
