@@ -13,6 +13,6 @@ export const Wrapper = styled.main`
 `;
 
 export const Container = styled.section`
-  width: 42rem;
+  width: 100%;
   margin: 0 auto;
 `;
