@@ -24,7 +24,7 @@ function App({ children }) {
 
   const [darkMode, setDarkMode] = useState(getInitialMode());
 
-  const windowGlobal = typeof window !== 'undefined' && window;
+  const windowGlobal = typeof window !== 'undefined' && window.localStorage;
 
   useEffect(() => {
     localStorage.setItem('dark', JSON.stringify(darkMode));
