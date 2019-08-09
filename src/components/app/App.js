@@ -22,11 +22,12 @@ function App({ children }) {
     }
   `);
 
-  const [darkMode, setDarkMode] = useState(getInitialMode());
+  const [darkMode, setDarkMode] = useState(undefined);
 
-  const windowGlobal = typeof window !== 'undefined' && window;
+  const windowGlobal = typeof window !== 'undefined' && window.localStorage;
 
   useEffect(() => {
+    getInitialMode();
     localStorage.setItem('dark', JSON.stringify(darkMode));
   }, [darkMode]);
 
