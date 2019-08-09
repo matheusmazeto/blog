@@ -22,9 +22,9 @@ function App({ children }) {
     }
   `);
 
-  const verifying = typeof window !== 'undefined' && getInitialMode();
+  const [darkMode, setDarkMode] = useState(getInitialMode());
 
-  const [darkMode, setDarkMode] = useState(verifying);
+  const windowGlobal = typeof window !== 'undefined' && window;
 
   useEffect(() => {
     localStorage.setItem('dark', JSON.stringify(darkMode));
@@ -32,6 +32,8 @@ function App({ children }) {
 
   function getInitialMode() {
     const isReturningUser = 'dark' in localStorage;
+    if (windowGlobal) return isReturningUser;
+
     const savedMode = JSON.parse(localStorage.getItem('dark'));
     const userPrefersDark = getPrefColorScheme();
     // if mode was saved --> dark / light
