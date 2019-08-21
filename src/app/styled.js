@@ -1,15 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import media from 'styled-media-query';
-
-const resize = keyframes`
-  from{
-    grid-template-columns: 80px 1fr;
-  }
-  to{
-    grid-template-columns: 300px 1fr;
-  }
-}
-`;
+import styled from 'styled-components';
 
 export const Container = styled.section`
   display: grid;

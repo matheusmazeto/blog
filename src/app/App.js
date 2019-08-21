@@ -65,7 +65,7 @@ function App({ children }) {
           darkMode={darkMode}
           setDarkMode={() => setDarkMode(prevMode => !prevMode)}
           openMenu={openMenu}
-          setOpenMenu={() => setOpenMenu(alert('oi'))}
+          setOpenMenu={() => setOpenMenu(!openMenu)}
         />
         <main>{children}</main>
         <Footer />

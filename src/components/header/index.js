@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { Container, Menu } from './styled';
+import { Container } from './styled';
 
 import HamburguerMenu from '../hamburguer-menu';
-import CloseMenu from '../close-menu';
 import DarkModeToogle from '../dark-mode-toggle';
 
 export default function Header({
@@ -15,7 +14,7 @@ export default function Header({
   return (
     <Container>
       <header>
-        <HamburguerMenu openMenu={openMenu} onClick={setOpenMenu} />
+        <HamburguerMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
 
         <DarkModeToogle darkMode={darkMode} setDarkMode={setDarkMode} />
       </header>

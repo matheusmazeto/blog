@@ -5,7 +5,7 @@ import { Menu, Hamburguer, Label } from './styled';
 function HamburguerMenu({ openMenu, setOpenMenu }) {
   return (
     <Menu>
-      <Hamburguer openMenu={openMenu} setOpenMenu={setOpenMenu}></Hamburguer>
+      <Hamburguer onChange={setOpenMenu}></Hamburguer>
       <Label htmlFor="menu-hamburguer">
         <div></div>
         <div></div>
