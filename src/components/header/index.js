@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Container } from './styled';
+import { Container, Menu } from './styled';
 
-import DarkModeToogle from '../dark-mode-toggle/index';
+import HamburguerMenu from '../hamburguer-menu';
+import CloseMenu from '../close-menu';
+import DarkModeToogle from '../dark-mode-toggle';
 
-export default function Header({ darkMode, setDarkMode }) {
+export default function Header({
+  darkMode,
+  setDarkMode,
+  openMenu,
+  setOpenMenu,
+}) {
   return (
     <Container>
       <header>
-        <h1>Mazeto's bomb site</h1>
+        <HamburguerMenu openMenu={openMenu} onClick={setOpenMenu} />
+
         <DarkModeToogle darkMode={darkMode} setDarkMode={setDarkMode} />
       </header>
     </Container>

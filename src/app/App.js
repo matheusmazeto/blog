@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '../../styles/global';
-import { theme } from '../../utils/theme';
+import GlobalStyle from '../styles/global';
+import { theme } from '../utils/theme';
 
-import { Wrapper, Container } from './styled';
+import { Container } from './styled';
 
-import Header from '../header';
-import Footer from '../footer';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 function App({ children }) {
   const data = useStaticQuery(graphql`
@@ -23,6 +23,7 @@ function App({ children }) {
   `);
 
   const [darkMode, setDarkMode] = useState(undefined);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const windowGlobal = typeof window !== 'undefined' && window.localStorage;
 
@@ -58,17 +59,17 @@ function App({ children }) {
 
   return (
     <ThemeProvider theme={darkMode ? theme.dark : theme.light}>
-      <Wrapper>
-        <Container>
-          <GlobalStyle />
-          <Header
-            darkMode={darkMode}
-            setDarkMode={() => setDarkMode(prevMode => !prevMode)}
-          />
-          <main>{children}</main>
-          <Footer />
-        </Container>
-      </Wrapper>
+      <Container>
+        <GlobalStyle />
+        <Header
+          darkMode={darkMode}
+          setDarkMode={() => setDarkMode(prevMode => !prevMode)}
+          openMenu={openMenu}
+          setOpenMenu={() => setOpenMenu(alert('oi'))}
+        />
+        <main>{children}</main>
+        <Footer />
+      </Container>
     </ThemeProvider>
   );
 }
