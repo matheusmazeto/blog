@@ -1,0 +1,147 @@
+* {
+  transition: background-color 0.2s;
+}
+
+html {
+  background-color: #363636;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+footer.is-dark {
+  background-color: #363636 !important;
+  color: whitesmoke;
+}
+
+.hero.is-dark {
+  a:hover {
+    color: #dbdbdb !important;
+  }
+}
+
+.section {
+  &.has-background-light {
+    hr {
+      background-color: #e7e9ee;
+    }
+    p > code {
+      background-color: white;
+    }
+  }
+
+  &.has-background-dark {
+    a {
+      &:hover {
+        color: #dbdbdb;
+      }
+      color: whitesmoke;
+      text-decoration: underline;
+    }
+    hr {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+    code {
+      background-color: #272822;
+    }
+    blockquote {
+      background-color: #363636 !important;
+    }
+  }
+}
+
+.content {
+  &.has-text-light {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      color: whitesmoke !important;
+    }
+
+    .anchor > svg {
+      fill: whitesmoke;
+      &:hover {
+        fill: #dbdbdb;
+      }
+    }
+  }
+
+  &.has-text-dark {
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+      color: #363636 !important;
+    }
+  }
+
+  code {
+    border-radius: 4px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .katex {
+    font: inherit;
+  }
+
+  .tag,
+  .number {
+    display: inline;
+    padding: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    text-align: inherit;
+    vertical-align: inherit;
+    border-radius: inherit;
+    font-weight: inherit;
+    white-space: inherit;
+    background: inherit;
+    margin: inherit;
+  }
+
+  pre[class*='language-'] {
+    margin: 0.5em 0 1em 0;
+  }
+}
+
+.animated {
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+
+  &:hover {
+    box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+  }
+
+  &.animated-card {
+    height: 100%;
+    border-radius: $radius;
+
+    .card {
+      &.is-post {
+        height: 100%;
+        border-radius: $radius;
+
+        .image {
+          height: 180px;
+          border-top-left-radius: $radius;
+          border-top-right-radius: $radius;
+        }
+      }
+    }
+  }
+}

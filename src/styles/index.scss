@@ -1,0 +1,13 @@
+// Override Bulma variables
+$family-sans-serif: 'Quicksand', sans-serif;
+$footer-background-color: whitesmoke;
+$body-size: 18px;
+
+// Import Bulma
+@import '~bulma/bulma';
+
+// Katex
+@import '~katex/dist/katex.min.css';
+
+// Custom imports
+@import './custom.scss';
