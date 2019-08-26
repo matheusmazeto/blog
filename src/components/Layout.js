@@ -1,24 +1,24 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
-import { rhythm, scale } from '../utils/typography'
+import { rhythm, scale } from '../utils/typography';
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const isRootPath = location.pathname === `${__PATH_PREFIX__}/`
+    const { location, title, children } = this.props;
+    const isRootPath = location.pathname === `${__PATH_PREFIX__}/`;
     const pageNumber = location.pathname
       .split('/')
       .filter(Boolean)
-      .pop()
-    const isPaginatedPath = pageNumber && Boolean(pageNumber.match(/^[0-9]+$/))
-    let header
+      .pop();
+    const isPaginatedPath = pageNumber && Boolean(pageNumber.match(/^[0-9]+$/));
+    let header;
 
     if (isRootPath || isPaginatedPath) {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(0.75),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -34,7 +34,7 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h1>
-      )
+      );
     } else {
       header = (
         <h3
@@ -54,7 +54,7 @@ class Layout extends React.Component {
             {title}
           </Link>
         </h3>
-      )
+      );
     }
     return (
       <div
@@ -68,13 +68,15 @@ class Layout extends React.Component {
         {header}
         {children}
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.github.com/matheusmazeto">Github</a> &bull;{' '}
+          <a href="https://www.linkedin.com/in/matheus-mazeto-94076680/">
+            Linkedin
+          </a>{' '}
+          &bull; <a href="https://www.twitter.com/mazeto">Twitter</a>
         </footer>
       </div>
-    )
+    );
   }
 }
 
-export default Layout
+export default Layout;
