@@ -70,8 +70,4 @@ yarn-error.log
 
 .netlify/
 
-# Editors
-.vscode/*
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+contentful.json
