@@ -1,80 +1,118 @@
+const postCssPresetEnv = require(`postcss-preset-env`);
+const postCSSNested = require('postcss-nested');
+const postCSSUrl = require('postcss-url');
+const postCSSImports = require('postcss-import');
+const cssnano = require('cssnano');
+const postCSSMixins = require('postcss-mixins');
+
 module.exports = {
   siteMetadata: {
-    title: 'Bomb site',
-    author: 'Matheus Mazeto',
-    description:
-      'I have been a web developer since 2018 and am currently living in Maringá, PR. I am currently working at Objective Solutions',
-    siteUrl: 'https://mazeto.dev/',
-    social: {
-      twitter: `mazeto`,
+    title: `Bomb site`,
+    description: `A simple starter for Gatsby. That's it.`,
+    copyrights: '',
+    author: `@mazeto`,
+    logo: {
+      src: '',
+      alt: '',
     },
+    logoText: 'Matheus Mazeto',
+    defaultTheme: 'light',
+    postsPerPage: 5,
+    showMenuItems: 2,
+    menuMoreText: 'Show more',
+    mainMenu: [
+      {
+        title: 'About',
+        path: '/about',
+      },
+    ],
   },
-  pathPrefix: '/gatsby-paginated-blog',
   plugins: [
-    `gatsby-plugin-styled-components`,
+    `babel-preset-gatsby`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [
+          postCSSUrl(),
+          postCSSImports(),
+          postCSSMixins(),
+          postCSSNested(),
+          postCssPresetEnv({
+            importFrom: 'src/styles/variables.css',
+            stage: 1,
+            preserve: false,
+          }),
+          cssnano({
+            preset: 'default',
+          }),
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        plugins: [
+          {
+            resolve: 'gatsby-remark-embed-video',
+            options: {
+              related: false,
+              noIframeBorder: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              quality: 100,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
+        ],
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `gatsby-starter-hello-friend`,
+        short_name: `hello-friend`,
         start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
+        background_color: `#292a2d`,
+        theme_color: `#292a2d`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
-      },
-    },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
+        icon: `src/images/hello-icon.png`,
       },
     },
   ],
