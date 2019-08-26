@@ -3,6 +3,16 @@ import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
 
+import styled from 'styled-components';
+const Container = styled.div`
+  margin: 3rem auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props;
@@ -31,7 +41,7 @@ class Layout extends React.Component {
             }}
             to={`/`}
           >
-            {title}
+            <Container>{title}</Container>
           </Link>
         </h1>
       );
