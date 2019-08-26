@@ -155,7 +155,7 @@ You must add `@narative/gatsby-theme-novela` as a plugin in `gatsby-config.js`.
 // gatsby-config.js
 
 module.exports = {
-  plugins: ["@narative/gatsby-theme-novela"],
+  plugins: ["@narative/gatsby-theme-novela"]
 };
 ```
 
@@ -232,20 +232,20 @@ module.exports = {
     // important to set the main text that appears in the hero
     hero: {
       heading: `Perspectives on technology, design and business from the team at Narative.`,
-      maxWidth: 652,
+      maxWidth: 652
     },
     social: [
       {
         name: `twitter`,
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/narative`
       },
       {
         name: `github`,
-        url: `https://github.com/narative`,
-      },
-    ],
+        url: `https://github.com/narative`
+      }
+    ]
   },
-  plugins: ["@narative/gatsby-theme-novela"],
+  plugins: ["@narative/gatsby-theme-novela"]
 };
 ```
 
@@ -302,17 +302,17 @@ plugins: [
     resolve: "gatsby-source-contentful",
     options: {
       spaceId: process.env.CONTENTFUL_SPACE_ID,
-      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-    },
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+    }
   },
   {
     resolve: "@narative/gatsby-theme-novela",
     options: {
       sources: {
-        contentful: true,
-      },
-    },
-  },
+        contentful: true
+      }
+    }
+  }
 ];
 ```
 
@@ -340,10 +340,10 @@ module.exports = {
     {
       resolve: "@narative/gatsby-theme-novela",
       options: {
-        authorsPage: true,
-      },
-    },
-  ],
+        authorsPage: true
+      }
+    }
+  ]
 };
 ```
 
@@ -368,8 +368,8 @@ export default {
     secondary: "#73737D",
     accent: "#6166DC",
     grey: "#73737D",
-    background: "#fff",
-  },
+    background: "#fff"
+  }
 };
 ```
 
@@ -468,15 +468,15 @@ plugins: [
       contentPosts: "content/posts",
       contentAuthors: "content/authors",
       basePath: "/",
-      mailchimp: true, // make sure this is true!
-    },
+      mailchimp: true // make sure this is true!
+    }
   },
   {
     resolve: "gatsby-plugin-mailchimp",
     options: {
-      endpoint: "", // add your MC list endpoint here; see plugin repo for instructions
-    },
-  },
+      endpoint: "" // add your MC list endpoint here; see plugin repo for instructions
+    }
+  }
 ];
 ```
 
@@ -529,10 +529,10 @@ plugins: [
       mailchimp: true,
       sources: {
         local: true,
-        contentful: true,
-      },
-    },
-  },
+        contentful: true
+      }
+    }
+  }
 ];
 ```
 
@@ -627,26 +627,26 @@ module.exports = {
     // A required key and will be displayed on the main page of Noveal
     hero: {
       heading: `Perspectives on technology, design and business from the team at Narative.`,
-      maxWidth: 652,
+      maxWidth: 652
     },
 
     // social
     // Add in the social links that will be displayed in the footer
     social: [
       {
-        url: `https://twitter.com/narative`,
+        url: `https://twitter.com/narative`
       },
       {
-        url: `https://github.com/narative`,
+        url: `https://github.com/narative`
       },
       {
-        url: `https://www.instagram.com/narative.co/`,
+        url: `https://www.instagram.com/narative.co/`
       },
       {
-        url: `https://dribbble.com/narativestudio`,
-      },
-    ],
-  },
+        url: `https://dribbble.com/narativestudio`
+      }
+    ]
+  }
 };
 ```
 
