@@ -6,7 +6,7 @@ import Icon from './icon';
 
 import style from '../styles/menu.module.css';
 
-const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
+function MainMenu({ mainMenu, mainMenuItems, isMobileMenu }) {
   const menu = mainMenu.slice(0);
   !isMobileMenu && menu.splice(mainMenuItems);
 
@@ -15,9 +15,9 @@ const MainMenu = ({ mainMenu, mainMenuItems, isMobileMenu }) => {
       <Link to={menuItem.path}>{menuItem.title}</Link>
     </li>
   ));
-};
+}
 
-const SubMenu = ({ mainMenu, mainMenuItems, onToggleSubMenu }) => {
+function SubMenu({ mainMenu, mainMenuItems, onToggleSubMenu }) {
   const menu = mainMenu.slice(0);
   menu.splice(0, mainMenuItems);
 
@@ -39,14 +39,14 @@ const SubMenu = ({ mainMenu, mainMenuItems, onToggleSubMenu }) => {
       />
     </>
   );
-};
+}
 
 const menuIcon = `M4 34H40V30H4V34ZM4 24H40V20H4V24ZM4 10V14H40V10H4Z`;
 const toggleIcon = `M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
 3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
 13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z`;
 
-const Menu = ({
+function Menu({
   mainMenu,
   mainMenuItems,
   menuMoreText,
@@ -55,7 +55,7 @@ const Menu = ({
   onToggleMobileMenu,
   onToggleSubMenu,
   onChangeTheme,
-}) => {
+}) {
   const isSubMenu = !(mainMenuItems >= mainMenu.length) && mainMenuItems > 0;
 
   return (
@@ -123,7 +123,7 @@ const Menu = ({
       </button>
     </>
   );
-};
+}
 
 Menu.propTypes = {
   mainMenu: PropTypes.arrayOf(

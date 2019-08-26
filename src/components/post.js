@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import Img from 'gatsby-image'
-import Navigation from './navigation'
-import { toKebabCase } from '../helpers'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import Img from 'gatsby-image';
+import Navigation from './navigation';
+import { toKebabCase } from '../helpers';
 
-import style from '../styles/post.module.css'
+import style from '../styles/post.module.css';
 
-const Post = ({
+function Post({
   title,
   date,
   path,
@@ -18,11 +18,11 @@ const Post = ({
   html,
   previousPost,
   nextPost,
-}) => {
-  const previousPath = previousPost && previousPost.frontmatter.path
-  const previousLabel = previousPost && previousPost.frontmatter.title
-  const nextPath = nextPost && nextPost.frontmatter.path
-  const nextLabel = nextPost && nextPost.frontmatter.title
+}) {
+  const previousPath = previousPost && previousPost.frontmatter.path;
+  const previousLabel = previousPost && previousPost.frontmatter.title;
+  const nextPath = nextPost && nextPost.frontmatter.path;
+  const nextLabel = nextPost && nextPost.frontmatter.title;
 
   return (
     <div className={style.post}>
@@ -70,7 +70,7 @@ const Post = ({
         )}
       </div>
     </div>
-  )
+  );
 }
 
 Post.propTypes = {
@@ -84,6 +84,6 @@ Post.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
   previousPost: PropTypes.object,
   nextPost: PropTypes.object,
-}
+};
 
-export default Post
+export default Post;

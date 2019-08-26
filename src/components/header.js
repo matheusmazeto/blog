@@ -9,7 +9,7 @@ import Menu from './menu';
 
 import style from '../styles/header.module.css';
 
-const Header = props => {
+function Header(props) {
   const {
     siteLogo,
     logoText,
@@ -78,7 +78,7 @@ const Header = props => {
       </header>
     </>
   );
-};
+}
 
 Header.propTypes = {
   siteLogo: PropTypes.object,
