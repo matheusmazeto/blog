@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout';
 
-function Home() {
-  return <Layout>Home</Layout>;
+function About() {
+  return <Layout>About</Layout>;
 }
 
-export default Home;
+export default About;
