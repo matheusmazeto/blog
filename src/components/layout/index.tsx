@@ -1,11 +1,17 @@
 import React from 'react';
 
+import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../../style/global';
+
 function Layout({ children }) {
   return (
-    <div>
-      <h1>Hello Layout</h1>
-      {children}
-    </div>
+    <ThemeProvider theme={{}}>
+      <>
+        <GlobalStyle />
+        <h1>Hello Layout</h1>
+        {children}
+      </>
+    </ThemeProvider>
   );
 }
 
