@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { HamburguerContainer } from './style';
 
 function Hamburguer() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <HamburguerContainer>
-      <span></span>
-      <span></span>
-      <span></span>
+    <HamburguerContainer open={open} onClick={() => setOpen(!open)}>
+      <div />
+      <div />
+      <div />
     </HamburguerContainer>
   );
 }

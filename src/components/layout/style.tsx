@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -6,12 +7,16 @@ export const Wrapper = styled.section`
 
   display: grid;
 
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px 1fr;
 
   grid-template-areas:
-    'sidebar header '
-    'sidebar  main';
+    'header'
+    'main';
+
+  ${media.greaterThan('small')`
+    background: blue;
+  `}
 
   main {
     width: 100%;

@@ -7,4 +7,7 @@ export const HeaderContainer = styled.header`
   background: #fff;
 
   grid-area: header;
+
+  display: flex;
+  align-items: center;
 `;
