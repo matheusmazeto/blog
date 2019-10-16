@@ -15,13 +15,11 @@ export const Wrapper = styled.section`
     'main';
 
   ${media.greaterThan('small')`
-    background: blue;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: 0 1fr;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 90px 1fr;
 
     grid-template-areas:
-    'header '
+    'header header'
     'sidebar main';
   `}
 
@@ -33,8 +31,7 @@ export const Wrapper = styled.section`
     left: 0;
 
     ${media.greaterThan('small')`
-    left: 250px;
-    padding-top: 90px;
+    
   `}
 
     background: #f5f5f5;
