@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import media from 'styled-media-query';
 
 export const HamburguerContainer = styled.section`
   display: flex;
@@ -9,11 +10,18 @@ export const HamburguerContainer = styled.section`
   width: 90px;
   height: 90px;
 
+  ${media.greaterThan('small')`
+  background: #707070;
+  width: 250px;
+  align-items: flex-start;
+  padding-left: 25px;
+  `}
+
   div {
     width: 55px;
     height: 10px;
-    background: ${({ open }) => (open ? 'red' : 'green')};
-    box-shadow: 1px 1px 3px black;
+    background: ${({ open }) => (open ? '#2684FF' : '#2684FF')};
+    box-shadow: 0px 0px 3px black;
     border-radius: 2px;
     transition: 0.4s ease;
     &:not(:first-child) {

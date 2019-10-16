@@ -10,7 +10,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   html, body, #root {
-    min-height: 100%;
+    min-height: 100vh;
     font-family: 'Playfair Display', serif;
   }
   body {

@@ -12,6 +12,7 @@ export const SidebarContainer = styled.aside`
 
   ${media.greaterThan('small')`
     display: flex;
+    position: fixed;
   `}
 
   div {
