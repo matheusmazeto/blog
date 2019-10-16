@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import media from 'styled-media-query';
 
 export const Wrapper = styled.section`
+  position: relative;
+
   width: 100%;
   min-height: 100vh;
 
@@ -24,11 +26,14 @@ export const Wrapper = styled.section`
   `}
 
   main {
-    width: 100%;
-    min-height: 100vh;
-
     position: relative;
-    left: 0;
+
+    width: 100%;
+    min-height: 100%;
+    padding: 30px 0;
+
+    display: flex;
+    flex-flow: column wrap;
 
     ${media.greaterThan('small')`
     

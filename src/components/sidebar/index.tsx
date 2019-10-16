@@ -5,7 +5,7 @@ import { SidebarContainer } from './style';
 function Sidebar() {
   return (
     <SidebarContainer>
-      <div></div>
+      <section></section>
     </SidebarContainer>
   );
 }

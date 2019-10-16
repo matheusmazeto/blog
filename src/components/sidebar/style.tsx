@@ -15,7 +15,7 @@ export const SidebarContainer = styled.aside`
     position: fixed;
   `}
 
-  div {
+  section {
     background: #707070;
 
     height: 90px;

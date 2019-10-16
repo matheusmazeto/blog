@@ -3,10 +3,10 @@ import React from 'react';
 import { HeaderContainer } from './style';
 import Hamburguer from '../hamburguer';
 
-function Header() {
+function Header({ open, setOpen }) {
   return (
     <HeaderContainer>
-      <Hamburguer />
+      <Hamburguer open={open} setOpen={setOpen} />
     </HeaderContainer>
   );
 }

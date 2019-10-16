@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 
 import { HamburguerContainer } from './style';
 
-function Hamburguer() {
-  const [open, setOpen] = useState(false);
-
+function Hamburguer({ open, setOpen }) {
   return (
-    <HamburguerContainer open={open} onClick={() => setOpen(!open)}>
+    <HamburguerContainer open={open} onClick={setOpen}>
       <div />
       <div />
       <div />
