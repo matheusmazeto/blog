@@ -17,8 +17,6 @@ function Layout({ children }) {
       <>
         <GlobalStyle />
         <Wrapper>
-          <Menu open={open} setOpen={() => setOpen(!open)} />
-          <Sidebar />
           <Header open={open} setOpen={() => setOpen(!open)} />
           <main>{children}</main>
         </Wrapper>

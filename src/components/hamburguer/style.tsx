@@ -1,5 +1,4 @@
-import styled, { keyframes } from 'styled-components';
-import media from 'styled-media-query';
+import styled from 'styled-components';
 
 export const HamburguerContainer = styled.section`
   display: flex;
@@ -10,14 +9,8 @@ export const HamburguerContainer = styled.section`
   width: 90px;
   height: 90px;
 
-  ${media.greaterThan('small')`
-  background: #707070;
-  width: 250px;
-  align-items: flex-start;
-  padding-left: 25px;
-  `}
-
   div {
+    z-index: 1;
     width: 55px;
     height: 10px;
     background: ${({ open }) => (open ? '#2684FF' : '#2684FF')};
