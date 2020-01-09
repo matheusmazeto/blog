@@ -9,9 +9,11 @@ export default createGlobalStyle`
   }
   html, body, #root {
     min-height: 100%;
+    font-size: 10px;
   }
   body {
-    background: #7159c1;
+    /* background: #7159c1; */
+    background: #fff;
     -webkit-font-smoothing: antialiased !important;
   }
   body, input, button {

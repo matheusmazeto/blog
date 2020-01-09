@@ -1,31 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Profile from '../Profile';
 import Avatar from '../Avatar';
+import Header from '../Header';
 
 import styled from 'styled-components';
 import GlobalStyles from '../../styles/global';
 
 const LayoutWrapper = styled.section`
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 `;
 
 const LayoutMain = styled.main`
-  background: #16202c;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  padding: 0 3.75rem 0 20rem;
   width: 100%;
 `;
 
 const Layout = ({ children }) => {
+  const [openMenu, setOpenMenu] = useState(false);
   return (
     <LayoutWrapper>
       <GlobalStyles />
-      <aside>
-        <Avatar />
-        <Profile />
-      </aside>
+      <Header openMenu={openMenu} setOpenMenu={() => setOpenMenu(!openMenu)} />
       <LayoutMain>{children}</LayoutMain>
     </LayoutWrapper>
   );
