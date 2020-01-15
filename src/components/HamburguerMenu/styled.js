@@ -1,47 +1,64 @@
 import styled from 'styled-components';
 
-export const Menu = styled.section``;
-
-export const Label = styled.label`
+export const Menu = styled.section`
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 2px;
   cursor: pointer;
-  transition: all ${({ theme }) => theme.transition};
 
-  &:hover div {
-    box-shadow: 1px 1px 7px -1px #000;
+  #toggle {
+    display: none;
   }
-  div {
-    width: 30px;
-    height: 5px;
-    background: #000;
 
-    border-radius: 0px;
-    transition: 0.4s ease;
-    &:not(:first-child) {
-      margin-top: 5px;
-    }
+  .menu-button {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
   }
-`;
 
-export const Hamburguer = styled.input.attrs((props) => ({
-  type: 'checkbox',
-  id: 'menu-hamburguer',
-}))`
-  display: none;
+  .menu-button:before,
+  .menu-button:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+  }
 
-  &:checked + ${Label} {
-    div {
-      transform: rotateY(180deg) rotateX(360deg);
-      &:first-child {
-        transform: rotate(-45deg);
-        margin-top: 1px;
-      }
-      &:nth-child(2) {
-        opacity: 0;
-      }
-      &:nth-child(3) {
-        margin-top: -15px;
-        transform: rotate(45deg);
-      }
-    }
+  .menu-button:before {
+    top: -6px;
+  }
+  .menu-button:after {
+    top: 6px;
+  }
+
+  .menu-button,
+  .menu-button:before,
+  .menu-button:after {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #toggle:checked + label .menu-button {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+  }
+
+  #toggle:checked + label .menu-button:before {
+    transform: rotate(45deg);
+    top: 0px;
+  }
+
+  #toggle:checked + label .menu-button:after {
+    transform: rotate(135deg);
+    top: 0;
   }
 `;

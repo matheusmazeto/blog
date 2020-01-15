@@ -4,13 +4,11 @@ import { Menu, Hamburguer, Label } from './styled';
 
 function HamburguerMenu({ openMenu, setOpenMenu }) {
   return (
-    <Menu>
-      <Hamburguer checked={openMenu} onChange={setOpenMenu}></Hamburguer>
-      <Label htmlFor="menu-hamburguer">
-        <div></div>
-        <div></div>
-        <div></div>
-      </Label>
+    <Menu class="center">
+      <input id="toggle" type="checkbox" />
+      <label for="toggle" class="container-menu">
+        <div class="menu-button"></div>
+      </label>
     </Menu>
   );
 }
