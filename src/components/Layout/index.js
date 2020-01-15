@@ -18,16 +18,14 @@ const LayoutWrapper = styled.section`
 const LayoutMain = styled.main`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
+  flex: 1;
 `;
 
 const Layout = ({ children }) => {
-  const [openMenu, setOpenMenu] = useState(false);
   return (
     <LayoutWrapper>
       <GlobalStyles />
-      <Header openMenu={openMenu} setOpenMenu={() => setOpenMenu(!openMenu)} />
+      <Header />
       <LayoutMain>{children}</LayoutMain>
     </LayoutWrapper>
   );

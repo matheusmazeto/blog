@@ -2,9 +2,21 @@ import styled from 'styled-components';
 import Link from 'gatsby';
 
 export const Nav = styled.nav`
+  position: absolute;
+  top: 5rem;
+  left: 0;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  min-height: ${({ openMenu }) => (openMenu ? '100vh' : '0')};
+  width: 100%;
+
+  transition: 1s;
+
+  background: ${({ openMenu }) => (openMenu ? '#444' : '#ff0')};
+  /* filter: blur(2px); */
 
   ul {
     display: flex;

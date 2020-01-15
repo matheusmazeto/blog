@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 
 import * as S from './styled';
 
-function Navbar() {
+function Navbar({ openMenu }) {
   return (
-    <S.Nav>
+    <S.Nav openMenu={openMenu}>
       <ul>
         <li>
           <Link to="/">Home</Link>

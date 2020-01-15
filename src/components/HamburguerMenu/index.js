@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Menu, Hamburguer, Label } from './styled';
+import { Menu } from './styled';
 
 function HamburguerMenu({ openMenu, setOpenMenu }) {
   return (
-    <Menu class="center">
-      <input id="toggle" type="checkbox" />
-      <label for="toggle" class="container-menu">
-        <div class="menu-button"></div>
+    <Menu class="center" openMenu={openMenu}>
+      <input id="toggle" type="checkbox" onClick={setOpenMenu} />
+      <label htmlFor="toggle" className="container-menu">
+        <div className="menu-button"></div>
       </label>
     </Menu>
   );
