@@ -6,7 +6,7 @@ function Hero() {
     <section>
       {/* use playfair */}
       <h1>Hi, my Name is Matheus Mazeto</h1>
-      <p>I'm a software developer currently living in Brazil.</p>
+      <p>I'm a computer scientist currently living in Brazil.</p>
       <p>
         I have been working with web technologies, such as React, React Native
         and NodeJS.
