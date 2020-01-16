@@ -19,7 +19,7 @@ function Header() {
         <img src={Logo} alt="Logo MM" />
       </Link>
       <HamburguerMenu setOpenMenu={() => setOpenMenu(!openMenu)} />
-      <Navbar openMenu={openMenu} />
+      {/* <Navbar openMenu={openMenu} /> */}
     </S.Container>
   );
 }

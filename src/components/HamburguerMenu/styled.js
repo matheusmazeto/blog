@@ -4,7 +4,7 @@ export const Menu = styled.section`
   display: block;
   position: relative;
   width: 20px;
-  height: 2px;
+  height: 20px;
   cursor: pointer;
 
   #toggle {
