@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
  @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Righteous|Roboto+Mono:400,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
   * {
     margin: 0;
     padding: 0;

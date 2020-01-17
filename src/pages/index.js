@@ -1,15 +1,18 @@
 import React from 'react';
 
+import SEO from '../components/seo';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
-
-import SEO from '../components/seo';
+import PostItem from '../components/PostItem';
 
 function IndexPage() {
   return (
     <Layout>
       <SEO title="Home" />
-      <Hero />
+      {/* <Hero /> */}
+      <PostItem />
+      <PostItem />
+      <PostItem />
     </Layout>
   );
 }

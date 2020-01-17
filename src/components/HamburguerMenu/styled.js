@@ -26,14 +26,14 @@ export const Menu = styled.section`
   nav {
     position: absolute;
     right: 0rem;
-    top: 2.3rem;
+    top: 2rem;
     background-color: whitesmoke;
     border: 1px solid #efefef;
     border-bottom: 1px solid #ddd;
     visibility: hidden;
     border-radius: 2px;
     padding: 25px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255);
     box-shadow: 0 1px 3px 0 #eee;
     opacity: 0;
     transform: scale(0.7);
