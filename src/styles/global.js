@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+ @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Righteous|Roboto+Mono:400,700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ export default createGlobalStyle`
   html, body, #root {
     min-height: 100%;
     font-size: 10px;
+
   }
   body {
     /* background: #7159c1; */

@@ -15,9 +15,7 @@ function Header() {
 
   return (
     <S.Container>
-      <Link to="/">
-        <img src={Logo} alt="Logo MM" />
-      </Link>
+      <S.Logo to="/">Room on Fire</S.Logo>
       <HamburguerMenu setOpenMenu={() => setOpenMenu(!openMenu)} />
       {/* <Navbar openMenu={openMenu} /> */}
     </S.Container>

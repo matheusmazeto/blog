@@ -1,64 +1,74 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
+
+export const NavLink = styled(Link)``;
 
 export const Menu = styled.section`
-  display: block;
+  display: inline-block;
   position: relative;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
 
-  #toggle {
-    display: none;
+  .btn {
+    display: block;
+    cursor: pointer;
+
+    .bar {
+      width: 20px;
+      height: 2px;
+      background: #000;
+      margin-bottom: 4px;
+    }
+
+    .bar:last-child {
+      margin-bottom: 0px;
+    }
   }
 
-  .menu-button {
-    width: 100%;
-    height: 3px;
-    background-color: #000;
+  nav {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.2s ease-in-out;
-    border-radius: 10px;
+    right: 0rem;
+    top: 2.3rem;
+    background-color: whitesmoke;
+    border: 1px solid #efefef;
+    border-bottom: 1px solid #ddd;
+    visibility: hidden;
+    border-radius: 2px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 3px 0 #eee;
+    opacity: 0;
+    transform: scale(0.7);
+    transition: all 0.2s;
+
+    ul {
+      li {
+        list-style: none;
+
+        & + li {
+          padding: 0.5rem 0 0;
+        }
+      }
+    }
+
+    ${NavLink} {
+      font-family: 'Playfair Display', serif;
+      color: #222;
+      display: block;
+      white-space: nowrap;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    li:last-child ${NavLink} {
+      border-bottom: 0px;
+    }
+    ${NavLink}:hover {
+      text-decoration: underline;
+    }
   }
 
-  .menu-button:before,
-  .menu-button:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #000;
-    transition: all 0.2s ease-in-out;
-    border-radius: 5px;
-  }
-
-  .menu-button:before {
-    top: -6px;
-  }
-  .menu-button:after {
-    top: 6px;
-  }
-
-  .menu-button,
-  .menu-button:before,
-  .menu-button:after {
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  #toggle:checked + label .menu-button {
-    background-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
-  }
-
-  #toggle:checked + label .menu-button:before {
-    transform: rotate(45deg);
-    top: 0px;
-  }
-
-  #toggle:checked + label .menu-button:after {
-    transform: rotate(135deg);
-    top: 0;
+  .menu_show {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
   }
 `;
