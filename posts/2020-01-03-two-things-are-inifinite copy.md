@@ -1,5 +1,5 @@
 ---
-date: 2019-01-03 05:54:23
+date: 2021-01-03 05:54:23
 title: Two things are infinite
 description: And I'm not sure about the universe.
 category: Misc
@@ -13,6 +13,24 @@ Proin suscipit luctus orci placerat fringilla. Donec hendrerit laoreet risus ege
 a=3
 puts a
 ```
+
+```jsx
+import React from 'react';
+import Profile from '../Profile';
+import SocialLinks from '../SocialLinks';
+import MenuLinks from '../MenuLinks';
+import * as S from './styled';
+const Sidebar = () => (
+  <S.SidebarWrapper>
+    <Profile />
+    <SocialLinks />
+    <MenuLinks />
+  </S.SidebarWrapper>
+);
+export default Sidebar;
+```
+
+![lake](/assets/img/lake.jpg)
 
 ## Fusce a metus eu
 
