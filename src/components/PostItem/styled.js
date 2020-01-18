@@ -6,12 +6,9 @@ export const PostItemLink = styled(Link)`
   display: flex;
   padding: 0 25px;
   text-decoration: none;
+  padding: 2rem;
   &:hover {
     color: #1fa1f2;
-  }
-
-  &:not(:last-child) {
-    padding: 2rem;
   }
 `;
 

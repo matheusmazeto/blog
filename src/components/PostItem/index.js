@@ -14,7 +14,7 @@ function PostItem({ slug, title, category, description, date, timeToRead }) {
           </S.WrapperPostItemTitle>
           <S.PostItemDescription>{description}</S.PostItemDescription>
           <S.PostItemDate>
-            {date} • {timeToRead} min de leitura
+            {date} • {timeToRead} min read
           </S.PostItemDate>
         </S.PostItemInfo>
       </S.PostItemWrapper>
@@ -28,7 +28,7 @@ PostItem.propTypes = {
   category: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  timeToRead: PropTypes.string.isRequired,
+  timeToRead: PropTypes.number.isRequired,
 };
 
 export default PostItem;
