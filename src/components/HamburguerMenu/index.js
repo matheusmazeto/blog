@@ -6,11 +6,11 @@ function HamburguerMenu({ openMenu, setOpenMenu }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <Menu class="menu">
-      <div class="btn" onClick={() => setOpen(!open)}>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <Menu className="menu">
+      <div className="btn" onClick={() => setOpen(!open)}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
 
       <nav id="nav" className={open ? 'menu_show' : null}>
