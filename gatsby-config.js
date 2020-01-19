@@ -5,7 +5,10 @@ module.exports = {
     author: `@mazeto`,
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: { stylesProvider: { injectFirst: true } },
+    },
     `gatsby-plugin-react-helmet`,
     // needs to be the first to work with gatsby-remark-images
     {
