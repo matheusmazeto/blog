@@ -13,7 +13,6 @@ const LayoutWrapper = styled.section`
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background-color: #333;
 `;
 
 const LayoutMain = styled.main`
