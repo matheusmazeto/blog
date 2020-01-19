@@ -5,11 +5,9 @@ module.exports = {
     author: `@mazeto`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: { stylesProvider: { injectFirst: true } },
-    },
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+
     // needs to be the first to work with gatsby-remark-images
     {
       resolve: `gatsby-source-filesystem`,
