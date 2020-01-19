@@ -1,1 +1,3 @@
 # mazeto.dev
+
+teste
