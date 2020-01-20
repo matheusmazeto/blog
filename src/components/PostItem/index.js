@@ -13,9 +13,7 @@ function PostItem({ slug, title, category, description, date, timeToRead }) {
             <S.PostItemTag>{category}</S.PostItemTag>
           </S.WrapperPostItemTitle>
           <S.PostItemDescription>{description}</S.PostItemDescription>
-          <S.PostItemDate>
-            {date} • {timeToRead} min read
-          </S.PostItemDate>
+          <S.PostItemDate>{date}</S.PostItemDate>
         </S.PostItemInfo>
       </S.PostItemWrapper>
     </S.PostItemLink>

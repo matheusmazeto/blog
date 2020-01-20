@@ -9,10 +9,10 @@ import styled from 'styled-components';
 import GlobalStyles from '../../styles/global';
 
 const LayoutWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 `;
 
 const LayoutMain = styled.main`

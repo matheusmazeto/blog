@@ -12,14 +12,14 @@ export const Menu = styled.section`
     cursor: pointer;
 
     .bar {
-      width: 20px;
-      height: 2px;
+      width: 1.5rem;
+      height: 0.2rem;
+      margin-bottom: 0.2rem;
       background: #000;
-      margin-bottom: 4px;
     }
 
     .bar:last-child {
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }
   }
 
@@ -28,13 +28,13 @@ export const Menu = styled.section`
     right: 0rem;
     top: 2rem;
     background-color: whitesmoke;
-    border: 1px solid #efefef;
-    border-bottom: 1px solid #ddd;
+    border: 0.1rem solid #efefef;
+    border-bottom: 0.1rem solid #ddd;
     visibility: hidden;
-    border-radius: 2px;
-    padding: 25px;
+    border-radius: 0.2rem;
+    padding: 2.5rem;
     background: rgba(255, 255, 255);
-    box-shadow: 0 1px 3px 0 #eee;
+    box-shadow: 0 0.1rem 0.3rem 0 #eee;
     opacity: 0;
     transform: scale(0.7);
     transition: all 0.2s;
@@ -59,7 +59,7 @@ export const Menu = styled.section`
     }
 
     li:last-child ${NavLink} {
-      border-bottom: 0px;
+      border-bottom: 0;
     }
     ${NavLink}:hover {
       text-decoration: underline;

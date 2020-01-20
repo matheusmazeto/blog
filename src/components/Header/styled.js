@@ -6,7 +6,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: 2rem 2rem 3rem;
 
   img {
     width: 3rem;
@@ -16,7 +16,7 @@ export const Container = styled.header`
 
 export const Logo = styled(Link)`
   font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;
   color: #ff4f00;
