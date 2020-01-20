@@ -19,5 +19,5 @@ export const Logo = styled(Link)`
   font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;
-  color: (--highlight);
+  color: var(--highlight);
 `;

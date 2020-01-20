@@ -11,6 +11,7 @@ const LayoutWrapper = styled.section`
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--background);
 `;
 
 const LayoutMain = styled.main`

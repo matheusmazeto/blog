@@ -17,8 +17,16 @@ export default createGlobalStyle`
   }
   body {
     -webkit-font-smoothing: antialiased !important;
+  }
+  body, input, button {
+    font-size: 14px;
+    font-family: 'Muli', sans-serif;
+  }
+  button {
+    cursor: pointer;
+  }
 
-    body {
+  body {
     --borders: #BDBDBD;
     --text: #212121;
     --highlight: #FF5722;
@@ -26,27 +34,17 @@ export default createGlobalStyle`
     --white: #fff;
     --black: #000;
     --shadow: #424242;
+    --hamburguer: #000;
   }
 
-    body.dark {
+  body.dark {
     --borders: #BDBDBD;
-    --texts: #616161;
+    --text: #BDBDBD;
     --highlight: #FF5722;
     --background: #212121;
     --white: #fff;
     --black: #000;
     --shadow: #EEE;
-  }
-
-
-
-  }
-  body, input, button {
-    color: #222;
-    font-size: 14px;
-    font-family: 'Muli', sans-serif;
-  }
-  button {
-    cursor: pointer;
+    --hamburguer: #fff;
   }
 `;

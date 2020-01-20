@@ -15,7 +15,7 @@ export const Menu = styled.section`
       width: 1.5rem;
       height: 0.2rem;
       margin-bottom: 0.2rem;
-      background: (--black);
+      background: var(--hamburguer);
     }
 
     .bar:last-child {
@@ -28,13 +28,13 @@ export const Menu = styled.section`
     right: 0rem;
     top: 2rem;
     background-color: whitesmoke;
-    border: 0.1rem solid (--borders);
-    border-bottom: 0.1rem solid (--borders);
+    border: 0.1rem solid var(--borders);
+    border-bottom: 0.1rem solid var(--borders);
     visibility: hidden;
     border-radius: 0.2rem;
     padding: 2.5rem;
-    background: (--background);
-    box-shadow: 0 0.1rem 0.3rem 0 (--borders);
+    background: var(--background);
+    box-shadow: 0 0.1rem 0.3rem 0 var(--borders);
     opacity: 0;
     transform: scale(0.7);
     transition: all 0.2s;
