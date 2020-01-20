@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Menu, NavLink } from './styled';
 
-function HamburguerMenu({ openMenu, setOpenMenu }) {
+function HamburguerMenu() {
   const [open, setOpen] = useState(false);
 
   return (

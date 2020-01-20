@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import Profile from '../Profile';
-import Avatar from '../Avatar';
 import Header from '../Header';
 
 import styled from 'styled-components';
