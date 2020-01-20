@@ -1,37 +1,67 @@
 import styled from 'styled-components';
 
+export const PostWrapper = styled.article`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+`;
+
+export const PostDate = styled.section`
+  display: flex;
+  margin-bottom: 4rem;
+
+  p {
+    font-size: 1.7rem;
+    font-family: 'IBM Plex Mono', monospace;
+    color: #999;
+  }
+`;
+
 export const PostHeader = styled.header`
-  color: var(--white);
-  margin: auto;
-  max-width: 70rem;
-  padding: 5rem 5rem 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+
+  /* display: flex;
+  flex-direction: column;
+  color: var(--text);
+  font-size: 40px;
+  line-height: 40px;
+  font-family: 'Overpass Mono', monospace; */
 `;
 
-export const PostTitle = styled.h1`
-  font-size: 4rem;
-  font-weight: 700;
-  padding: 0 1.4rem;
-  margin: 1rem auto;
+export const PostTitle = styled.section`
+  display: flex;
+  margin-bottom: 1.8rem;
+
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 700;
+    font-family: 'Work Sans', sans-serif;
+    color: var(--text);
+  }
 `;
 
-export const PostDescription = styled.h2`
-  font-size: 2rem;
-  font-weight: 200;
-  padding: 0 1.4rem;
+export const PostDescription = styled.section`
+  display: flex;
+  padding-bottom: 3rem;
+  border-bottom: 0.1rem solid var(--shadow);
+
+  h2 {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+    font-weight: 400;
+    color: var(--text);
+  }
 `;
 
-export const PostDate = styled.p`
-  font-size: 1.1rem;
-  font-weight: 100;
-  padding: 0 1.4rem;
+export const TimeToRead = styled.section`
+  font-size: 1.4rem;
 `;
-
-export const TimeToRead = styled.section``;
 
 export const MainContent = styled.section`
-  margin: auto;
-  max-width: 70rem;
-  padding: 2rem 5rem;
   p,
   h1,
   h2,
@@ -42,7 +72,7 @@ export const MainContent = styled.section`
   .tags,
   iframe,
   .button-post {
-    color: var(--white);
+    color: var(--text);
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 1.7;

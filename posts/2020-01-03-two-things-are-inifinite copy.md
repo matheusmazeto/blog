@@ -1,6 +1,6 @@
 ---
 date: 2021-01-03 05:54:23
-title: Two things are infinite
+title: Finding Time to Invest in Yourself
 description: And I'm not sure about the universe.
 category: Misc
 ---

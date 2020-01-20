@@ -16,18 +16,25 @@ function BlogPost({ data, pageContext }) {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <S.PostHeader>
-        <S.PostDate>{post.frontmatter.date}</S.PostDate>
-
-        <S.TimeToRead>• {post.timeToRead} min read</S.TimeToRead>
-        <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
-        <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
-      </S.PostHeader>
-      <S.MainContent>
-        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-      </S.MainContent>
-      <RecommendedPosts next={next} previous={previous} />
-      <Comments url={post.fields.slug} title={post.frontmatter.title} />
+      <S.PostWrapper>
+        <S.PostDate>
+          <p>{post.frontmatter.date}</p>
+          {/* <S.TimeToRead>• {post.timeToRead} min read</S.TimeToRead> */}
+        </S.PostDate>
+        <S.PostHeader>
+          <S.PostTitle>
+            <h1>{post.frontmatter.title}</h1>
+          </S.PostTitle>
+          <S.PostDescription>
+            <h2>{post.frontmatter.description}</h2>
+          </S.PostDescription>
+        </S.PostHeader>
+        <S.MainContent>
+          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
+        </S.MainContent>
+        <RecommendedPosts next={next} previous={previous} />
+      </S.PostWrapper>
+      {/* <Comments url={post.fields.slug} title={post.frontmatter.title} /> */}
     </Layout>
   );
 }
@@ -43,6 +50,7 @@ export const query = graphql`
         description
         date(locale: "en-us", formatString: "DD MMM YYYY")
       }
+      timeToRead
       html
     }
   }

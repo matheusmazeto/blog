@@ -4,6 +4,10 @@ export default createGlobalStyle`
  @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Righteous|Roboto+Mono:400,700&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Muli:400,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,700&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -33,7 +37,7 @@ export default createGlobalStyle`
     --background: #FFF;
     --white: #fff;
     --black: #000;
-    --shadow: #424242;
+    --shadow: rgba(0,0,0,.10);
     --hamburguer: #000;
   }
 
