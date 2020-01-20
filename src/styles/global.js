@@ -26,7 +26,7 @@ export default createGlobalStyle`
     cursor: pointer;
   }
 
-  body {
+  body.light {
     --borders: #BDBDBD;
     --text: #212121;
     --highlight: #FF5722;
