@@ -21,3 +21,22 @@ export const Logo = styled(Link)`
   text-decoration: none;
   color: var(--highlight);
 `;
+
+export const WrapperMenu = styled.section`
+  display: flex;
+  align-items: center;
+`;
+
+export const DarkModeButton = styled.span`
+  display: flex;
+  color: var(--text);
+  cursor: pointer;
+  padding-right: 0.5rem;
+  transition: all 1s;
+
+  &.light {
+    &:hover {
+      color: #e2e240;
+    }
+  }
+`;

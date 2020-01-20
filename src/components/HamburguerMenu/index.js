@@ -12,7 +12,6 @@ function HamburguerMenu() {
         <div className="bar"></div>
         <div className="bar"></div>
       </div>
-
       <nav id="nav" className={open ? 'menu_show' : null}>
         <ul>
           <li>

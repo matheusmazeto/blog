@@ -30,7 +30,7 @@ export default createGlobalStyle`
     --borders: #BDBDBD;
     --text: #212121;
     --highlight: #FF5722;
-    --background: #FAFAFA;
+    --background: #FFF;
     --white: #fff;
     --black: #000;
     --shadow: #424242;

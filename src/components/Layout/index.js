@@ -7,9 +7,9 @@ import styled from 'styled-components';
 import GlobalStyles from '../../styles/global';
 
 const LayoutWrapper = styled.section`
-  width: 100%;
   min-height: 100vh;
   display: flex;
+  flex: 1;
   flex-direction: column;
   background: var(--background);
 `;

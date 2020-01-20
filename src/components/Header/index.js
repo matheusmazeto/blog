@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 import HamburguerMenu from '../HamburguerMenu';
 
+import { WbSunny as Sun } from 'styled-icons/material/WbSunny';
+import { Moon } from 'styled-icons/boxicons-regular/Moon';
+
 import * as S from './styled';
 
 function Header() {
@@ -18,18 +21,17 @@ function Header() {
   return (
     <S.Container>
       <S.Logo to="/">Room on Fire</S.Logo>
-      <div>
-        <span
+      <S.WrapperMenu>
+        <S.DarkModeButton
           onClick={() => {
             window.__setPreferredTheme(isDarkMode ? 'light' : 'dark');
           }}
           className={theme}
         >
-          Light
-        </span>
+          {isDarkMode ? <Moon size="1.5rem" /> : <Sun size="1.5rem" />}
+        </S.DarkModeButton>
         <HamburguerMenu setOpenMenu={() => setOpenMenu(!openMenu)} />
-      </div>
-      {/* <Navbar openMenu={openMenu} /> */}
+      </S.WrapperMenu>
     </S.Container>
   );
 }
