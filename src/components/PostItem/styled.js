@@ -51,11 +51,7 @@ export const PostItemDescription = styled.p`
 
 export const PostItemDate = styled.time`
   font-size: 1.3rem;
-<<<<<<< HEAD
   color: (--text);
-=======
-  color: #5e5e5e;
->>>>>>> 37abd0077a5bfb0177847cd9102f9a4e2c78c21e
 `;
 
 export const TimeToRead = styled.section``;
