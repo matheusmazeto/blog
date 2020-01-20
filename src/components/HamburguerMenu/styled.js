@@ -15,7 +15,7 @@ export const Menu = styled.section`
       width: 1.5rem;
       height: 0.2rem;
       margin-bottom: 0.2rem;
-      background: #000;
+      background: (--black);
     }
 
     .bar:last-child {
@@ -28,13 +28,13 @@ export const Menu = styled.section`
     right: 0rem;
     top: 2rem;
     background-color: whitesmoke;
-    border: 0.1rem solid #efefef;
-    border-bottom: 0.1rem solid #ddd;
+    border: 0.1rem solid (--borders);
+    border-bottom: 0.1rem solid (--borders);
     visibility: hidden;
     border-radius: 0.2rem;
     padding: 2.5rem;
-    background: rgba(255, 255, 255);
-    box-shadow: 0 0.1rem 0.3rem 0 #eee;
+    background: (--background);
+    box-shadow: 0 0.1rem 0.3rem 0 (--borders);
     opacity: 0;
     transform: scale(0.7);
     transition: all 0.2s;

@@ -16,9 +16,29 @@ export default createGlobalStyle`
     font-size: 10px;
   }
   body {
-    /* background: #7159c1; */
-    background: #fff;
     -webkit-font-smoothing: antialiased !important;
+
+    body {
+    --borders: #BDBDBD;
+    --text: #212121;
+    --highlight: #FF5722;
+    --background: #FAFAFA;
+    --white: #fff;
+    --black: #000;
+    --shadow: #424242;
+  }
+
+    body.dark {
+    --borders: #BDBDBD;
+    --texts: #616161;
+    --highlight: #FF5722;
+    --background: #212121;
+    --white: #fff;
+    --black: #000;
+    --shadow: #EEE;
+  }
+
+
 
   }
   body, input, button {

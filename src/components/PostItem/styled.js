@@ -8,7 +8,7 @@ export const PostItemLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: #ff4f00;
+    color: (--highlight);
   }
 `;
 
@@ -36,7 +36,7 @@ export const PostItemTitle = styled.h1`
   font-weight: bold;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #000;
+  color: (--text);
 `;
 
 export const PostItemTag = styled.div``;
@@ -46,12 +46,12 @@ export const PostItemDescription = styled.p`
   font-weight: 400;
   line-height: 2.5rem;
   margin-top: 1.3rem;
-  color: #000;
+  color: (--text);
 `;
 
 export const PostItemDate = styled.time`
   font-size: 1.3rem;
-  color: #5e5e5e;
+  color: (--text);
 `;
 
 export const TimeToRead = styled.section``;
