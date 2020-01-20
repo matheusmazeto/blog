@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 
 import HamburguerMenu from '../HamburguerMenu';
-import Navbar from '../Navbar';
-
-import Logo from '../../images/mm-black.svg';
 
 import * as S from './styled';
 

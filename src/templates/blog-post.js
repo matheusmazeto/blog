@@ -17,9 +17,9 @@ function BlogPost({ data, pageContext }) {
     <Layout>
       <SEO title={post.frontmatter.title} />
       <S.PostHeader>
-        <S.PostDate>
-          {post.frontmatter.date} • {post.timeToRead} min de leitura
-        </S.PostDate>
+        <S.PostDate>{post.frontmatter.date}</S.PostDate>
+
+        <S.TimeToRead>• {post.timeToRead} min read</S.TimeToRead>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
       </S.PostHeader>

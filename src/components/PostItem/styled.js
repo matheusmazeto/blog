@@ -50,7 +50,7 @@ export const PostItemDescription = styled.p`
 `;
 
 export const PostItemDate = styled.time`
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #5e5e5e;
 `;
 

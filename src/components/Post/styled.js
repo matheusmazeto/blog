@@ -26,6 +26,8 @@ export const PostDate = styled.p`
   padding: 0 1.4rem;
 `;
 
+export const TimeToRead = styled.section``;
+
 export const MainContent = styled.section`
   margin: auto;
   max-width: 70rem;
