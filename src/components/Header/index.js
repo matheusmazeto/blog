@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-import HamburguerMenu from '../HamburguerMenu';
-
 import { WbSunny as Sun } from 'styled-icons/material/WbSunny';
 import { Moon } from 'styled-icons/boxicons-regular/Moon';
 
 import * as S from './styled';
 
 function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
   const [theme, setTheme] = useState(null);
 
   const isDarkMode = theme === 'dark';
@@ -30,7 +27,6 @@ function Header() {
         >
           {isDarkMode ? <Moon size="1.5rem" /> : <Sun size="1.5rem" />}
         </S.DarkModeButton>
-        <HamburguerMenu setOpenMenu={() => setOpenMenu(!openMenu)} />
       </S.WrapperMenu>
     </S.Container>
   );

@@ -15,7 +15,6 @@ export const Container = styled.header`
 `;
 
 export const Logo = styled(Link)`
-  font-family: 'Roboto Mono', monospace;
   font-size: 1.6rem;
   font-weight: 700;
   text-decoration: none;

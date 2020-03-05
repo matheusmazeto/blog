@@ -13,7 +13,6 @@ export const PostDate = styled.section`
 
   p {
     font-size: 1.7rem;
-    font-family: 'IBM Plex Mono', monospace;
     color: #999;
   }
 `;
@@ -28,7 +27,6 @@ export const PostHeader = styled.header`
   color: var(--text);
   font-size: 40px;
   line-height: 40px;
-  font-family: 'Overpass Mono', monospace; */
 `;
 
 export const PostTitle = styled.section`
@@ -39,7 +37,6 @@ export const PostTitle = styled.section`
     font-size: 4rem;
     line-height: 4rem;
     font-weight: 700;
-    font-family: 'Work Sans', sans-serif;
     color: var(--text);
   }
 `;
