@@ -22,7 +22,7 @@ export const PostHeader = styled.header`
   display: flex;
   flex-flow: column wrap;
 
-  /* display: flex;
+  display: flex;
   flex-direction: column;
   color: var(--text);
   font-size: 40px;

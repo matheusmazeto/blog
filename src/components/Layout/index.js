@@ -8,18 +8,10 @@ import ResetStyles from '../../styles/global';
 import GlobalStyles from '../../styles/global';
 
 const LayoutWrapper = styled.section`
-  min-height: 100vh;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
   background: var(--background);
 `;
 
-const LayoutMain = styled.main`
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-`;
+const LayoutMain = styled.main``;
 
 const Layout = ({ children }) => {
   return (
