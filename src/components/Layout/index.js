@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../Header';
 
 import styled from 'styled-components';
+import ResetStyles from '../../styles/global';
 import GlobalStyles from '../../styles/global';
 
 const LayoutWrapper = styled.section`
@@ -23,6 +24,7 @@ const LayoutMain = styled.main`
 const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
+      <ResetStyles />
       <GlobalStyles />
       <Header />
       <LayoutMain>{children}</LayoutMain>
