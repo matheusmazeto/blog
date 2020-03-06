@@ -9,9 +9,17 @@ import GlobalStyles from '../../styles/global';
 
 const LayoutWrapper = styled.section`
   background: var(--background);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 `;
 
-const LayoutMain = styled.main``;
+const LayoutMain = styled.main`
+  display: flex;
+  flex-direction: column;
+  background: #333;
+`;
 
 const Layout = ({ children }) => {
   return (

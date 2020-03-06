@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-import { WbSunny as Sun } from 'styled-icons/material/WbSunny';
-import { Moon } from 'styled-icons/boxicons-regular/Moon';
+import { GiStripedSun } from 'react-icons/gi';
+import { FiMoon } from 'react-icons/fi';
 
 import * as S from './styled';
 
@@ -9,6 +9,7 @@ function Header() {
   const [theme, setTheme] = useState(null);
 
   const isDarkMode = theme === 'dark';
+  const iconSize = '3rem';
 
   useEffect(() => {
     setTheme(window.__theme);
@@ -17,7 +18,7 @@ function Header() {
 
   return (
     <S.Container>
-      <S.Logo to="/">Room on Fire</S.Logo>
+      <S.Logo to="/">Matheus Mazeto</S.Logo>
       <S.WrapperMenu>
         <S.DarkModeButton
           onClick={() => {
@@ -25,7 +26,11 @@ function Header() {
           }}
           className={theme}
         >
-          {isDarkMode ? <Moon size="1.5rem" /> : <Sun size="1.5rem" />}
+          {isDarkMode ? (
+            <FiMoon size={iconSize} />
+          ) : (
+            <GiStripedSun size={iconSize} />
+          )}
         </S.DarkModeButton>
       </S.WrapperMenu>
     </S.Container>
