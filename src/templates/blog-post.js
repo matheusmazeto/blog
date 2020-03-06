@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import RecommendedPosts from '../components/RecommendedPosts';
-import Comments from '../components/Comments';
 
 import * as S from '../components/Post/styled';
 
