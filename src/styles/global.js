@@ -10,17 +10,12 @@ export default createGlobalStyle`
   html, body, #root {
     min-height: 100%;
     width: 100%;
-    font-size: 10px;
+    font-size: 62.5%;
   }
   body {
     -webkit-font-smoothing: antialiased !important;
   }
-  body, input, button {
-    font-size: 14px;
-  }
-  button {
-    cursor: pointer;
-  }
+
 
   body.light {
     --borders: #BDBDBD;
