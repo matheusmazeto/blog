@@ -26,11 +26,7 @@ function Header() {
           }}
           className={theme}
         >
-          {isDarkMode ? (
-            <FiMoon size={iconSize} />
-          ) : (
-            <GiStripedSun size={iconSize} />
-          )}
+          <GiStripedSun size={iconSize} isDarkMode={isDarkMode} />
         </S.DarkModeButton>
       </S.WrapperMenu>
     </S.Container>

@@ -18,24 +18,17 @@ export default createGlobalStyle`
 
 
   body.light {
-    --borders: #BDBDBD;
-    --text: #212121;
-    --highlight: #FF5722;
-    --background: #FFF;
-    --white: #fff;
-    --black: #000;
-    --shadow: rgba(0,0,0,.10);
-    --hamburguer: #000;
+    --primary: #000;
+    --secondary: ;
+    --background: #fff;
+    --border: box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    
   }
 
   body.dark {
-    --borders: #BDBDBD;
-    --text: #BDBDBD;
-    --highlight: #FF5722;
+    --primary: #000;
+    --secondary: ;
     --background: #212121;
-    --white: #fff;
-    --black: #000;
-    --shadow: #EEE;
-    --hamburguer: #fff;
+    --border: box-shadow: 0 1px 3px rgba(255, 255, 255, 0.88), 0 1px 2px rgba(255, 255, 255, 0.76);
   }
 `;

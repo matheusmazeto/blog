@@ -6,7 +6,7 @@ export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 `;
 
 export const Logo = styled(Link)`
@@ -20,9 +20,11 @@ export const WrapperMenu = styled.section``;
 export const DarkModeButton = styled.span`
   color: var(--text);
 
-  &.light {
-    &:hover {
-      color: #e2e240;
-    }
+  svg {
+    fill: ${({ isDarkMode }) => 'var(--invert)'};
+  }
+
+  img {
+    width: 3rem;
   }
 `;

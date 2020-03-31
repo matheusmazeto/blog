@@ -1,34 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from '../Header';
+import Sidebar from '../Sidebar';
 
 import styled from 'styled-components';
 import ResetStyles from '../../styles/global';
 import GlobalStyles from '../../styles/global';
 
-const LayoutWrapper = styled.section`
+const Wrapper = styled.section`
   background: var(--background);
-  display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: 100vh;
 `;
 
-const LayoutMain = styled.main`
-  display: flex;
-  flex-direction: column;
-  background: #333;
+const Container = styled.section`
+  display: grid;
+  grid-template-areas: 'sidebar main';
+  grid-template-columns: 22rem auto;
+  grid-column-gap: 45px;
+  max-width: 120rem;
+
+  margin: 0 auto;
+
+  main {
+    grid-area: main;
+  }
 `;
 
 const Layout = ({ children }) => {
   return (
-    <LayoutWrapper>
+    <Wrapper>
       <ResetStyles />
       <GlobalStyles />
-      <Header />
-      <LayoutMain>{children}</LayoutMain>
-    </LayoutWrapper>
+      <Container>
+        <Sidebar />
+        <main>{children}</main>
+      </Container>
+    </Wrapper>
   );
 };
 
