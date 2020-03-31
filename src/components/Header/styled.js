@@ -16,15 +16,3 @@ export const Logo = styled(Link)`
 `;
 
 export const WrapperMenu = styled.section``;
-
-export const DarkModeButton = styled.span`
-  color: var(--text);
-
-  svg {
-    fill: ${({ isDarkMode }) => 'var(--invert)'};
-  }
-
-  img {
-    width: 3rem;
-  }
-`;

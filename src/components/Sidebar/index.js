@@ -1,12 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
 
-const Container = styled.aside`
-  grid-area: sidebar;
-`;
+import NightMode from '../NightMode';
+
+import { Container } from './styled';
 
 function Sidebar() {
-  return <div>Side</div>;
+  return (
+    <Container>
+      <NightMode />
+    </Container>
+  );
 }
 
 export default Sidebar;
