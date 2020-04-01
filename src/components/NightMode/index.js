@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { GiStripedSun } from 'react-icons/gi';
-import { FiMoon } from 'react-icons/fi';
+
 
 import * as S from './styled';
 

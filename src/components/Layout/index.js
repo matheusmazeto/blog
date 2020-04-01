@@ -6,7 +6,6 @@ import Sidebar from '../Sidebar';
 import styled from 'styled-components';
 import ResetStyles from '../../styles/global';
 import GlobalStyles from '../../styles/global';
-
 const Wrapper = styled.section`
   background: var(--background);
   width: 100%;
