@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 export const Container = styled.header`
-  height: 10rem;
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;

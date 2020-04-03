@@ -3,14 +3,16 @@ import React, { useState } from 'react';
 import NightMode from '../NightMode';
 import Header from '../Header';
 
-import { Container } from './styled';
+import * as S from './styled';
 
 function Sidebar() {
   return (
-    <Container>
-      <NightMode />
+    <S.Container>
+      <S.NightModeContainer>
+        <NightMode />
+      </S.NightModeContainer>
       <Header />
-    </Container>
+    </S.Container>
   );
 }
 

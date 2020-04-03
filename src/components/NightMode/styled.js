@@ -4,7 +4,7 @@ export const Label = styled.label`
   cursor: pointer;
   text-indent: -9999px;
   width: 5rem;
-  height: 2.4rem;
+  height: 2.2rem;
   background: grey;
   display: block;
   border-radius: 100px;
@@ -15,8 +15,8 @@ export const Label = styled.label`
     position: absolute;
     top: 0.1rem;
     left: 0.2rem;
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2rem;
+    height: 2rem;
     background: #fff;
     border-radius: 50%;
     transition: 0.3s;
