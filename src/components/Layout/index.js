@@ -15,7 +15,7 @@ const Wrapper = styled.section`
 const Container = styled.section`
   display: grid;
   grid-template-areas: 'sidebar main';
-  grid-template-columns: 22rem auto;
+  grid-template-columns: 30rem auto;
   grid-column-gap: 45px;
   max-width: 120rem;
 

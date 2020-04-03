@@ -4,15 +4,20 @@ import { Link } from 'gatsby';
 export const Container = styled.header`
   height: 10rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
 `;
 
 export const Logo = styled(Link)`
   color: var(--highlight);
-  font-size: 2rem;
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: left;
+  text-shadow: rgb(224, 224, 224) 3px 4px 0px;
+  -webkit-font-smoothing: auto;
   text-decoration: none;
+  font-family: Rubik, sans-serif;
 `;
 
 export const WrapperMenu = styled.section``;
