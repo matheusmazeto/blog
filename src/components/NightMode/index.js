@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { GiStripedSun } from 'react-icons/gi';
-
-
 import * as S from './styled';
 
 export default function NightMode() {
@@ -16,12 +13,15 @@ export default function NightMode() {
   }, []);
 
   return (
-    <S.DarkModeButton
-      onClick={() => {
-        window.__setPreferredTheme(isDarkMode ? 'light' : 'dark');
-      }}
-    >
-      <GiStripedSun size={iconSize} isDarkMode={isDarkMode} />
-    </S.DarkModeButton>
+    <>
+      <S.DarkModeButton
+        type="checkbox"
+        id="switch"
+        onClick={() => {
+          window.__setPreferredTheme(isDarkMode ? 'light' : 'dark');
+        }}
+      ></S.DarkModeButton>
+      <S.Label for="switch">Toggle</S.Label>
+    </>
   );
 }
