@@ -5,18 +5,16 @@ import * as S from './styled';
 
 function PostItem({ slug, title, category, description, date, timeToRead }) {
   return (
-    <S.PostItemLink to={slug}>
-      <S.PostItemWrapper>
-        <S.PostItemInfo>
-          <S.WrapperPostItemTitle>
-            <S.PostItemTitle>{title}</S.PostItemTitle>
-            <S.PostItemDescription>{description}</S.PostItemDescription>
-          </S.WrapperPostItemTitle>
-          <S.PostItemDate>{date}</S.PostItemDate>
-          <S.PostItemTag>{category}</S.PostItemTag>
-        </S.PostItemInfo>
-      </S.PostItemWrapper>
-    </S.PostItemLink>
+    <S.LinkContainer to={slug}>
+      <S.Top>
+        <S.Title>{title}</S.Title>
+        <S.Date>{date}</S.Date>
+      </S.Top>
+      <S.Bottom>
+        <S.Description>{description}</S.Description>
+        <S.Tag>{category}</S.Tag>
+      </S.Bottom>
+    </S.LinkContainer>
   );
 }
 

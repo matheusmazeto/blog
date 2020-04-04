@@ -11,23 +11,23 @@
 // 1. Spaces
 // --------------------------------------------------
 
-export const Space = {
+export const fontSize = {
   xxs: `.4rem`,
   xs: `.8rem`,
-  sm: `1.6rem`,
-  default: `2.4rem`,
-  md: `3.2rem`,
-  lg: `4.8rem`,
-  xlg: `6.4rem`,
-  xxlg: `9.6rem`,
+  sm: `1.2rem`,
+  default: `1.6rem`,
+  md: `2rem`,
+  lg: `2.4rem`,
+  xlg: `2.8rem`,
+  xxlg: `3.2rem`,
 };
 
-export const Height = {
-  headerSm: `${Space.lg}`,
-  headerLg: `${Space.xlg}`,
-  footer: `4rem`,
-  mainTop: `${Space.md}`,
-};
+// export const Height = {
+//   headerSm: `${Space.lg}`,
+//   headerLg: `${Space.xlg}`,
+//   footer: `4rem`,
+//   mainTop: `${Space.md}`,
+// };
 
 // --------------------------------------------------
 // 2. Colors

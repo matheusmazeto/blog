@@ -1,30 +1,53 @@
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-export const PostItemLink = styled(Link)`
+export const LinkContainer = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 2rem 1.2rem;
+  font-family: Rubik, 'sans-serif';
+  border-bottom: 0.1rem dotted var(--divider);
+
   &:hover {
-    color: var(--highlight);
+    background-color: rgba(200, 230, 201, 0.1);
   }
 `;
 
-export const PostItemWrapper = styled.section``;
-
-export const PostItemInfo = styled.div``;
-
-export const WrapperPostItemTitle = styled.section``;
-
-export const PostItemTitle = styled.h1`
-  color: var(--text);
+export const Top = styled.section`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
-export const PostItemTag = styled.div``;
-
-export const PostItemDescription = styled.p`
-  color: var(--text);
+export const Bottom = styled.section`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 `;
 
-export const PostItemDate = styled.time`
-  color: var(--text);
+export const Title = styled.h4`
+  font-size: var(--font-xlg);
+  font-weight: 400;
+  padding-bottom: 1rem;
 `;
 
-export const TimeToRead = styled.section``;
+export const Description = styled.p`
+  font-size: var(--font-default);
+  font-weight: 100;
+`;
+
+export const Date = styled.time`
+  font-size: var(--font-default);
+  font-weight: 100;
+  padding-bottom: 1.4rem;
+`;
+
+export const Tag = styled.a`
+  font-size: var(--font-default);
+  font-weight: 700;
+  padding: 0.8rem;
+  background-color: #3999;
+  border-radius: 0.3rem;
+`;

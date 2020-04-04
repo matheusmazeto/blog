@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from './theme';
 import * as V from './variables';
 
 export default createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
   * {
     margin: 0;
     padding: 0;
@@ -20,16 +22,27 @@ export default createGlobalStyle`
     -webkit-overflow-scrolling: touch;
   }
 
+  :root {
+  --font-xxs: ${V.fontSize.xxs};
+  --font-xs: ${V.fontSize.xs};
+  --font-sm: ${V.fontSize.sm};
+  --font-default: ${V.fontSize.default};
+  --font-md: ${V.fontSize.md};
+  --font-lg: ${V.fontSize.lg};
+  --font-xlg: ${V.fontSize.xlg};
+  --font-xxlg: ${V.fontSize.xxlg};
+  }
+
 
   body.light {
-    --bg-main: ${V.colors.grey.grey100};
+    --bg-main: ${V.colors.grey.grey50};
     --bg-sidebar: ${V.colors.white};
     --border: ${V.colors.grey.grey300};
-    --link: ${V.colors.green.green400}
+    --link: ${V.colors.green.green400};
+    --divider: ${V.colors.green.green900};
     --primary: #000;
     --secondary: ;
     --invert: #000;
-    
   }
 
   body.dark {

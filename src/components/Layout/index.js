@@ -9,17 +9,21 @@ import GlobalStyles from '../../styles/global';
 const Wrapper = styled.section`
   width: 100%;
   min-height: 100vh;
+  background: var(--bg-main);
 `;
 
 const Container = styled.section`
   display: grid;
   grid-template-areas: 'sidebar main';
   grid-template-columns: 30rem auto;
-  background: var(--bg-main);
+  grid-column-gap: 4.5rem;
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
 
   article {
     grid-area: main;
-    margin: 0 6rem;
+    margin: 7rem 0;
   }
 `;
 
