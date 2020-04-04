@@ -5,7 +5,7 @@ export const Label = styled.label`
   text-indent: -9999px;
   width: 5rem;
   height: 2.2rem;
-  background: grey;
+  background: var(--bg-invert);
   display: block;
   border-radius: 100px;
   position: relative;
@@ -17,7 +17,7 @@ export const Label = styled.label`
     left: 0.2rem;
     width: 2rem;
     height: 2rem;
-    background: #fff;
+    background-color: var(--bg);
     border-radius: 50%;
     transition: 0.3s;
   }
@@ -29,7 +29,7 @@ export const DarkModeButton = styled.input`
   visibility: hidden;
 
   &:checked + ${Label} {
-    background: #bada55;
+    background-color: var(--bg-invert);
   }
 
   &:checked + ${Label}:after {

@@ -5,7 +5,6 @@ import * as S from './styled';
 export default function NightMode() {
   const [theme, setTheme] = useState(null);
   const isDarkMode = theme === 'dark';
-  const iconSize = '3rem';
 
   useEffect(() => {
     setTheme(window.__theme);

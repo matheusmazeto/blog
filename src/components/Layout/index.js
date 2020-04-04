@@ -9,7 +9,8 @@ import GlobalStyles from '../../styles/global';
 const Wrapper = styled.section`
   width: 100%;
   min-height: 100vh;
-  background: var(--bg-main);
+  background: var(--bg);
+  transition: all 0.5s;
 `;
 
 const Container = styled.section`

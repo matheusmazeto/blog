@@ -29,19 +29,22 @@ export const Bottom = styled.section`
 
 export const Title = styled.h4`
   font-size: var(--font-xlg);
-  font-weight: 400;
+  font-weight: 700;
   padding-bottom: 1rem;
+  color: var(--header);
 `;
 
 export const Description = styled.p`
   font-size: var(--font-default);
-  font-weight: 100;
+  font-weight: 400;
+  color: var(--paragraph);
 `;
 
 export const Date = styled.time`
   font-size: var(--font-default);
   font-weight: 100;
   padding-bottom: 1.4rem;
+  color: var(--date);
 `;
 
 export const Tag = styled.a`

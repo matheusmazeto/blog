@@ -20,6 +20,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: antialiased !important;
     -webkit-overflow-scrolling: touch;
+    
   }
 
   :root {
@@ -35,22 +36,24 @@ export default createGlobalStyle`
 
 
   body.light {
-    --bg-main: ${V.colors.grey.grey50};
-    --bg-sidebar: ${V.colors.white};
-    --border: ${V.colors.grey.grey300};
+    --bg: ${V.colors.grey.grey50};
+    --bg-invert: ${V.colors.grey.grey400};
+    --border: ${V.colors.grey.grey900};
     --link: ${V.colors.green.green400};
-    --divider: ${V.colors.green.green900};
-    --primary: #000;
-    --secondary: ;
-    --invert: #000;
+    --divider: ${V.colors.grey.grey900};
+    --header: ${V.colors.grey.grey900};
+    --paragraph: ${V.colors.grey.grey800};
+    --time: ${V.colors.grey.grey900};
   }
 
   body.dark {
-    --background: #212121;
-    --primary: #000;
-    --secondary: ;
-    --border: box-shadow: 0 1px 3px rgba(255, 255, 255, 0.88), 0 1px 2px rgba(255, 255, 255, 0.76);
-    --invert: #fff;
-
+    --bg: ${V.colors.grey.grey900};
+    --bg-invert: ${V.colors.grey.grey700};
+    --border: ${V.colors.grey.grey50};
+    --link: ${V.colors.green.green400};
+    --divider: ${V.colors.grey.grey700};
+    --header: ${V.colors.grey.grey300};
+    --paragraph: ${V.colors.grey.grey400};
+    --date: ${V.colors.grey.grey200};
   }
 `;
