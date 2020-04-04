@@ -10,10 +10,10 @@ function PostItem({ slug, title, category, description, date, timeToRead }) {
         <S.PostItemInfo>
           <S.WrapperPostItemTitle>
             <S.PostItemTitle>{title}</S.PostItemTitle>
-            <S.PostItemTag>{category}</S.PostItemTag>
+            <S.PostItemDescription>{description}</S.PostItemDescription>
           </S.WrapperPostItemTitle>
-          <S.PostItemDescription>{description}</S.PostItemDescription>
           <S.PostItemDate>{date}</S.PostItemDate>
+          <S.PostItemTag>{category}</S.PostItemTag>
         </S.PostItemInfo>
       </S.PostItemWrapper>
     </S.PostItemLink>

@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from './theme';
+import * as V from './variables';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
-
   * {
     margin: 0;
     padding: 0;
@@ -16,22 +16,26 @@ export default createGlobalStyle`
   }
   body {
     -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: antialiased !important;
+    -webkit-overflow-scrolling: touch;
   }
 
 
   body.light {
+    --bg-main: ${V.colors.grey.grey100};
+    --bg-sidebar: ${V.colors.white};
+    --border: ${V.colors.grey.grey300};
+    --link: ${V.colors.green.green400}
     --primary: #000;
     --secondary: ;
-    --background: #fff;
-    --border: box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     --invert: #000;
     
   }
 
   body.dark {
+    --background: #212121;
     --primary: #000;
     --secondary: ;
-    --background: #212121;
     --border: box-shadow: 0 1px 3px rgba(255, 255, 255, 0.88), 0 1px 2px rgba(255, 255, 255, 0.76);
     --invert: #fff;
 
