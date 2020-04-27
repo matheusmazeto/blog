@@ -22,7 +22,7 @@ const BioTextWrapper = styled.div`
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/avatar.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/avatar.png/" }) {
         childImageSharp {
           fixed(width: 75, height: 75) {
             ...GatsbyImageSharpFixed
@@ -52,7 +52,7 @@ const Bio = () => {
           margin-bottom: ${rhythm(1)};
         `}
       >
-        <a href={`https://attackingpixels.com`}>
+        <a href={`https://mazeto.dev`}>
           <Image
             fixed={data.avatar.childImageSharp.fixed}
             alt={author}
