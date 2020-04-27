@@ -20,22 +20,12 @@ const SocialIcons = () => {
   return (
     <SocialIconsWrapper>
       <SocialIconWrapper>
-        <a href="https://github.com/adamistheanswer">
+        <a href="https://github.com/matheusmazeto">
           <GitHubIcon />
         </a>
       </SocialIconWrapper>
       <SocialIconWrapper>
-        <a href="https://www.facebook.com/adamistheanswer">
-          <FacebookIcon />
-        </a>
-      </SocialIconWrapper>
-      <SocialIconWrapper>
-        <a href="https://www.instagram.com/adamistheanswer/">
-          <InstagramIcon />
-        </a>
-      </SocialIconWrapper>
-      <SocialIconWrapper>
-        <a href="https://www.linkedin.com/in/adamgrobinson/">
+        <a href="https://www.linkedin.com/in/matheusmazeto/">
           <LinkedInIcon />
         </a>
       </SocialIconWrapper>
