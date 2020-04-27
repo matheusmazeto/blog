@@ -1,4 +1,5 @@
-import 'lazysizes';
-require('prismjs/themes/prism-tomorrow.css');
-require('typeface-rubik');
-require('typeface-inconsolata');
+// custom typefaces
+import "typeface-montserrat"
+import "typeface-merriweather"
+import "./src/styles/global.css"
+require("prismjs/themes/prism-okaidia.css")

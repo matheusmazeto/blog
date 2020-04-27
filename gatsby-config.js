@@ -1,33 +1,44 @@
 module.exports = {
   siteMetadata: {
-    title: `Room on Fire`,
-    description: `A blog about front-end development and other cool stuff.`,
-    author: `@mazeto`,
+    title: `Matheus Mazeto`,
+    author: `Matheus Mazeto`,
+    description: `Welcome to my Blog - Take a look at my projects and experiments.`,
+    siteUrl: `https://mazeto.dev/`,
+    bio: `Computer scientist and software developer involved with React, React Native and Nodejs.`,
+    facebookToken: `YOUR_TOKEN_HERE`,
+    social: {
+      github: `matheusmazeto`,
+      facebook: `adamistheanswer`,
+      instagram: `mmazeto`,
+      linkedIn: `matheusmazeto`,
+    },
   },
   plugins: [
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
-
-    // needs to be the first to work with gatsby-remark-images
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-styled-components`,
       options: {
-        name: `uploads`,
-        path: `${__dirname}/static/assets/img`,
+        displayName: false,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
+        path: `${__dirname}/content/posts`,
         name: `posts`,
-        path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
+        name: `pages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
@@ -35,40 +46,119 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: `gatsby-remark-images`,
             options: {
-              name: 'uploads',
+              maxWidth: 1200,
+              quality: 95,
             },
           },
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              maxWidth: 960,
-              linkImagesToOriginal: false,
+              wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-lazy-load`,
           `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-dark-mode`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-61713068-1`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { fields: [frontmatter___date], order: DESC }
+                  limit: 1000
+                ) {
+                  edges {
+                    node {
+                      fields {
+                        slug
+                      }
+                      frontmatter {
+                        title
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Attacking Pixels RSS Feed",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname of
+            // current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/blog/",
+            // optional configuration to specify external rss feed, such as feedburner
+            link: "https://feeds.feedburner.com/gatsby/blog",
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Attacking Pixels - Adam Robinson`,
+        short_name: `Attacking Pixels - Adam Robinson`,
         start_url: `/`,
-        background_color: `#663399`,
+        background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `content/assets/icon.png`,
       },
     },
-    `gatsby-plugin-netlify-cms`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        mergeLinkHeaders: false,
+        mergeCachingHeaders: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
   ],
-};
+}
