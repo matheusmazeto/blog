@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components';
 import * as V from './variables';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,400,700&display=swap');
-  @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
   * {
     margin: 0;
@@ -20,7 +20,7 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: antialiased !important;
     -webkit-overflow-scrolling: touch;
-    
+
   }
 
   :root {

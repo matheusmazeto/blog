@@ -5,8 +5,7 @@ import * as S from './styled';
 function Header() {
   return (
     <S.Container>
-      <S.Logo to="/">Matheus Mazeto</S.Logo>
-      <S.WrapperMenu></S.WrapperMenu>
+      <S.Logo to="/">Voltar</S.Logo>
     </S.Container>
   );
 }
